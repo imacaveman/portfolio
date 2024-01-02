@@ -1,8 +1,17 @@
 h1 {
-    font-size: 54px;
+    font-size: 60px;
     text-align: center;
     margin: 10px auto;
 
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+main {
+    margin: 0 20px;
 }
 
 .burger-container {
@@ -52,4 +61,32 @@ h1 {
     flex-direction: column;
     align-items: center;
     bottom: 15px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.project-box {
+    border: solid black 1px;
+    overflow-x: hidden;
+}
+
+.project-text {
+    text-align: center;
+    margin-bottom: 10px;
+    & > h3 {
+        margin-top: 2px;
+        margin-bottom: 10px;
+    }
+}
+
+.fa-arrow-right {
+    margin-left: 2px;
+}
+
+.project-img {
+    width: 100%;
 }
