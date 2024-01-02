@@ -1,0 +1,55 @@
+h1 {
+    font-size: 54px;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+.burger-container {
+    display: flex;
+    position: fixed;
+    height: 55px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.burger-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-mid {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.main-banner {
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner-pic {
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}
+
+.scroll-notice {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    bottom: 15px;
+}
