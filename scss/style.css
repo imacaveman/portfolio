@@ -8,6 +8,7 @@ body {
 }
 
 * {
+  box-sizing: border-box;
   font-family: inherit;
 }
 
@@ -38,10 +39,6 @@ header {
   background-size: cover;
 }
 
-.fa-chevron-down {
-  color: #fff;
-}
-
 main {
   margin: 0 20px;
 }
@@ -51,11 +48,21 @@ footer {
   margin-bottom: 20px;
 }
 
+.fa-chevron-down {
+  color: #fff;
+}
+
 .main-container {
+  box-sizing: border-box;
   width: 100%;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .main-container {
+    max-width: 1000px;
+  }
 }
 
 .burger-container {
@@ -108,17 +115,36 @@ footer {
   bottom: 15px;
 }
 
-.projects {
+.projects-container {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .projects-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.projects {
   margin-bottom: 25px;
   max-width: 450px;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .projects {
+    max-width: 50%;
+  }
 }
 
 .project-box {
-  border: solid #ccc 1px;
+  border-radius: 5px;
   overflow-x: hidden;
   text-align: center;
+  background-image: url("../img/bg-blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .project-box > h3 {
   margin: 10px auto;
@@ -126,22 +152,47 @@ footer {
 
 .project-text {
   text-align: center;
-  margin: 10px 15px;
+  margin: 10px 15px 15px;
 }
 .project-text > p {
+  color: #fff;
   margin-top: 0;
+}
+.project-text > a {
+  color: #fff;
 }
 
 .view-project {
+  color: #fff;
   font-weight: bold;
 }
 
 .fa-arrow-right {
+  color: #fff;
   margin-left: 2px;
 }
 
 .project-img {
   width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+  }
+}
+
+.contact-section {
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .contact-section {
+    width: 50%;
+  }
 }
 
 .contact-box {
@@ -165,6 +216,7 @@ footer {
 .form-input {
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
 }
 
 .contact-input {
@@ -178,26 +230,34 @@ footer {
   border: solid #ccc 1px;
 }
 
+::-moz-placeholder {
+  opacity: 0.75;
+}
+
+::placeholder {
+  opacity: 0.75;
+}
+
 #contact-name:focus {
-  border-color: #5bc0de;
+  border-color: rgb(128, 203, 226);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 #contact-surname:focus {
-  border-color: #5bc0de;
+  border-color: rgb(128, 203, 226);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 #contact-email:focus {
-  border-color: #5bc0de;
+  border-color: rgb(128, 203, 226);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 #contact-subject:focus {
-  border-color: #5bc0de;
+  border-color: rgb(128, 203, 226);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
@@ -206,7 +266,7 @@ footer {
   height: 200px;
 }
 #contact-message:focus {
-  border-color: #5bc0de;
+  border-color: rgb(128, 203, 226);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
@@ -221,7 +281,9 @@ footer {
   letter-spacing: 1px;
 }
 .contact-submit:hover {
-  background: #ccc;
+  font-weight: 500;
+  border: solid rgb(128, 203, 226) 1px;
+  background: #9bd8eb;
 }
 
 .btt {
