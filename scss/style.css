@@ -1,6 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   margin: 0;
+}
+
+* {
+  font-family: inherit;
 }
 
 a {
@@ -22,8 +30,32 @@ h2 {
   text-align: center;
 }
 
+header {
+  background-image: url("../img/bg-blue.jpg");
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fa-chevron-down {
+  color: #fff;
+}
+
 main {
   margin: 0 20px;
+}
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .burger-container {
@@ -32,7 +64,7 @@ main {
   height: 55px;
   width: 60px;
   border-radius: 3px;
-  background-color: black;
+  background-color: #103a69;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -47,7 +79,7 @@ main {
 .burger-mid {
   width: 30px;
   height: 4px;
-  background-color: white;
+  background-color: #fff;
   margin: 3px 0;
 }
 
@@ -62,6 +94,7 @@ main {
 }
 
 .banner-pic {
+  border: solid #fff 4px;
   border-radius: 50%;
   height: 140px;
   width: 140px;
@@ -79,20 +112,28 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  max-width: 450px;
 }
 
 .project-box {
-  border: solid black 1px;
+  border: solid #ccc 1px;
   overflow-x: hidden;
+  text-align: center;
+}
+.project-box > h3 {
+  margin: 10px auto;
 }
 
 .project-text {
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px 15px;
 }
-.project-text > h3 {
-  margin-top: 2px;
-  margin-bottom: 10px;
+.project-text > p {
+  margin-top: 0;
+}
+
+.view-project {
+  font-weight: bold;
 }
 
 .fa-arrow-right {
@@ -101,4 +142,91 @@ main {
 
 .project-img {
   width: 100%;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact-info {
+  font-weight: bold;
+}
+
+.fa-phone {
+  margin-right: 10px;
+}
+
+.fa-envelope {
+  margin-right: 10px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 8px;
+  resize: none;
+  margin-bottom: 20px;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: solid #ccc 1px;
+}
+
+#contact-name:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+#contact-surname:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+#contact-email:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+#contact-subject:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+#contact-message {
+  height: 200px;
+}
+#contact-message:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+.contact-submit {
+  font-size: 15px;
+  text-transform: uppercase;
+  max-width: 450px;
+  padding: 12px;
+  border: solid #ccc 1px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.contact-submit:hover {
+  background: #ccc;
+}
+
+.btt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
