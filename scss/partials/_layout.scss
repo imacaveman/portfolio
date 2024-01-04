@@ -8,6 +8,9 @@ h1 {
 h2 {
     font-size: 40px;
     text-align: center;
+    @media screen and (max-width: 576px) {
+        font-size: 36px;
+    }
 }
 
 header {
@@ -252,6 +255,7 @@ p {
 .contact-box {
     display: flex;
     align-items: center;
+    color: $color-blue;
     margin: 20px 0;
 }
 
@@ -270,7 +274,6 @@ p {
 .form-input {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
 }
 
 .contact-input {
@@ -340,14 +343,78 @@ p {
 .aboutme-container {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.aboutme-section {
+    padding: 0 15px;
+    & > h3 {
+        margin-top: 0;
+    }
+    @media screen and (min-width: 768px) {
+            width: 50%;
+    }
+}
+
+.my-skills {
+    margin-bottom: 26px;
 }
 
 .aboutme-link {
     color: $color-lightblue;
     font-weight: 500;
+    &:hover {
+        color: $color-cyan;
+        text-decoration: none;
+    }
 }
 
 // ---------- END OF "ABOUT ME" PAGE ---------- //
+
+// ---------- "SCS SCHEME" PAGE ---------- //
+
+.scs-scheme-container {
+    margin-bottom: 40px;
+}
+
+.scheme-box {
+    border-radius: 5px;
+    overflow-x: hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    box-shadow: 4px 4px 10px 0 rgba($color-black, 0.2);
+    & > h3 {
+        font-size: 34px;
+        font-weight: 500;
+        margin: 10px auto;
+    }
+}
+
+.scheme-img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.scheme-text {
+    text-align: center;
+    margin: 10px 15px 15px;
+    & > p {
+        color: $color-black;
+        margin-top: 0;
+    }
+    & > ul {
+        text-align: left;
+        & > li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+// ---------- END OF "SCS SCHEME" PAGE ---------- //
 
 // btt = back to top
 .btt {

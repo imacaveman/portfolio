@@ -30,6 +30,11 @@ h2 {
   font-size: 40px;
   text-align: center;
 }
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 36px;
+  }
+}
 
 header {
   background-image: url("../img/bg-blue.jpg");
@@ -289,6 +294,7 @@ p {
 .contact-box {
   display: flex;
   align-items: center;
+  color: #103a69;
   margin: 20px 0;
 }
 
@@ -307,7 +313,6 @@ p {
 .form-input {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
 }
 
 .contact-input {
@@ -389,10 +394,74 @@ p {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .aboutme-container {
+    flex-direction: row;
+  }
+}
+
+.aboutme-section {
+  padding: 0 15px;
+}
+.aboutme-section > h3 {
+  margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .aboutme-section {
+    width: 50%;
+  }
+}
+
+.my-skills {
+  margin-bottom: 26px;
+}
 
 .aboutme-link {
   color: #309ACA;
   font-weight: 500;
+}
+.aboutme-link:hover {
+  color: #5bc0de;
+  text-decoration: none;
+}
+
+.scs-scheme-container {
+  margin-bottom: 40px;
+}
+
+.scheme-box {
+  border-radius: 5px;
+  overflow-x: hidden;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 17, 0.2);
+}
+.scheme-box > h3 {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 10px auto;
+}
+
+.scheme-img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.scheme-text {
+  text-align: center;
+  margin: 10px 15px 15px;
+}
+.scheme-text > p {
+  color: #001;
+  margin-top: 0;
+}
+.scheme-text > ul {
+  text-align: left;
+}
+.scheme-text > ul > li {
+  margin-bottom: 5px;
 }
 
 .btt {
