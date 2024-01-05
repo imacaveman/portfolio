@@ -6,12 +6,15 @@ h1 {
 }
 
 h2 {
+    color: $color-blue;
     font-size: 40px;
     text-align: center;
     @media screen and (max-width: 576px) {
         font-size: 36px;
     }
 }
+
+
 
 header {
     background-image: url("../img/bg-blue.jpg");
@@ -50,8 +53,10 @@ p {
 .sidebar-logo {
     background-color: $color-blue;
     text-align: center;
+    letter-spacing: 2px;
     font-size: 115px;
     line-height: 1.6;
+    font-weight: 400;
     & > a {
         color: $color-white;
         &:hover {
@@ -67,6 +72,7 @@ p {
     padding: 20px 15px;
     & > a {
         display: block;
+        color: $color-blue;
         padding-bottom: 5px;
         margin: 15px 0 5px;
         border-bottom: solid $color-white 3px;
@@ -150,12 +156,19 @@ p {
     display: flex;
     user-select: none;
     position: absolute;
+    align-items: center;
     top: 0;
     right: 0;
     color: $color-bg;
     &:hover {
         font-weight: 500;
         color: $color-cyan;
+        & > img {
+            visibility: visible;
+        }
+    }
+    & > img {
+        visibility: hidden;
     }
     @media screen and (min-width: 768px) {
         color: $color-bgdark;
@@ -190,7 +203,7 @@ p {
 }
 
 .projects {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     max-width: 450px;
     padding: 0 15px;
     @media screen and (min-width: 768px) {
@@ -199,14 +212,22 @@ p {
 }
 
 .project-box {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     overflow-x: hidden;
     text-align: center;
-    background-image: url("../img/bg-blue.jpg");
+    height: 100%;
+    background-image: url("../img/pj-blue.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    border: solid $color-blue 1px;
     box-shadow: 4px 4px 10px 0 rgba($color-black, 0.2);
     & > h3 {
+        color: $color-blue;
+        margin: 10px auto;
+        font-size: 24px;
+        font-weight: bold;
         margin: 10px auto;
     }
 }
@@ -219,18 +240,27 @@ p {
         margin-top: 0;
     }
     & > a {
-        color: $color-white;
+        color: $color-lightcyan;
+        &:hover {
+            color: $color-bg;
+        }
     }
 }
 
 .view-project {
-    color: $color-white;
+    font-size: 1.1em;
     font-weight: bold;
 }
 
 .fa-arrow-right {
-    color: $color-white;
     margin-left: 2px;
+}
+
+.inactive {
+    color: $color-gray;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .project-img {
@@ -386,6 +416,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    border: solid $color-gray 1px;
     box-shadow: 4px 4px 10px 0 rgba($color-black, 0.2);
     & > h3 {
         font-size: 34px;
@@ -405,6 +436,7 @@ p {
     & > p {
         color: $color-black;
         margin-top: 0;
+        margin-bottom: 32px;
     }
     & > ul {
         text-align: left;

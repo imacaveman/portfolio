@@ -27,6 +27,7 @@ h1 {
 }
 
 h2 {
+  color: #103a69;
   font-size: 40px;
   text-align: center;
 }
@@ -75,8 +76,10 @@ p {
 .sidebar-logo {
   background-color: #103a69;
   text-align: center;
+  letter-spacing: 2px;
   font-size: 115px;
   line-height: 1.6;
+  font-weight: 400;
 }
 .sidebar-logo > a {
   color: #fff;
@@ -93,6 +96,7 @@ p {
 }
 .sidebar-nav > a {
   display: block;
+  color: #103a69;
   padding-bottom: 5px;
   margin: 15px 0 5px;
   border-bottom: solid #fff 3px;
@@ -181,6 +185,7 @@ p {
      -moz-user-select: none;
           user-select: none;
   position: absolute;
+  align-items: center;
   top: 0;
   right: 0;
   color: #CADCE8;
@@ -188,6 +193,12 @@ p {
 .mount-txt:hover {
   font-weight: 500;
   color: #5bc0de;
+}
+.mount-txt:hover > img {
+  visibility: visible;
+}
+.mount-txt > img {
+  visibility: hidden;
 }
 @media screen and (min-width: 768px) {
   .mount-txt {
@@ -223,7 +234,7 @@ p {
 }
 
 .projects {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   max-width: 450px;
   padding: 0 15px;
 }
@@ -234,15 +245,23 @@ p {
 }
 
 .project-box {
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
   overflow-x: hidden;
   text-align: center;
-  background-image: url("../img/bg-blue.jpg");
+  height: 100%;
+  background-image: url("../img/pj-blue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: solid #103a69 1px;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 17, 0.2);
 }
 .project-box > h3 {
+  color: #103a69;
+  margin: 10px auto;
+  font-size: 24px;
+  font-weight: bold;
   margin: 10px auto;
 }
 
@@ -255,17 +274,26 @@ p {
   margin-top: 0;
 }
 .project-text > a {
-  color: #fff;
+  color: rgb(128, 203, 226);
+}
+.project-text > a:hover {
+  color: #CADCE8;
 }
 
 .view-project {
-  color: #fff;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
 .fa-arrow-right {
-  color: #fff;
   margin-left: 2px;
+}
+
+.inactive {
+  color: gray;
+}
+.inactive:hover {
+  text-decoration: none;
 }
 
 .project-img {
@@ -436,6 +464,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  border: solid gray 1px;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 17, 0.2);
 }
 .scheme-box > h3 {
@@ -456,6 +485,7 @@ p {
 .scheme-text > p {
   color: #001;
   margin-top: 0;
+  margin-bottom: 32px;
 }
 .scheme-text > ul {
   text-align: left;
