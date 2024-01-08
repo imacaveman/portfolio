@@ -1,3 +1,5 @@
+// ---------- COLOUR VARIABLES ---------- //
+
 $color-white: #fff;
 $color-black: #001;
 $color-gray: gray;
@@ -7,4 +9,11 @@ $color-lightblue: #309ACA;
 $color-cyan: #5bc0de;
 $color-lightcyan: rgb(128, 203, 226);
 $color-bg: #CADCE8;
-$color-bgdark: #C2D5E3
+$color-bgdark: #C2D5E3;
+
+// ---------- MEDIA BREAKPOINTS ---------- //
+
+$mb-sm: 576px;
+$mb-med: 768px;
+$mb-lg: 992px;
+$mb-xl: 1200px;

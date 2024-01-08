@@ -100,6 +100,7 @@ p {
   padding-bottom: 5px;
   margin: 15px 0 5px;
   border-bottom: solid #fff 3px;
+  transition: 0.5s;
 }
 .sidebar-nav > a:hover {
   border-color: #103a69;
@@ -114,10 +115,18 @@ p {
 
 .fa-github {
   color: #103a69;
+  transition: 0.5s;
+}
+.fa-github:hover {
+  color: #5bc0de;
 }
 
 .fa-chevron-down {
   color: #fff;
+  transition: 0.5s;
+}
+.fa-chevron-down:hover {
+  font-size: 26px;
 }
 
 .main-container {
@@ -188,22 +197,13 @@ p {
   align-items: center;
   top: 0;
   right: 0;
-  color: #CADCE8;
-}
-.mount-txt:hover {
+  opacity: 0;
+  transition: 0.5s;
   font-weight: 500;
   color: #5bc0de;
 }
-.mount-txt:hover > img {
-  visibility: visible;
-}
-.mount-txt > img {
-  visibility: hidden;
-}
-@media screen and (min-width: 768px) {
-  .mount-txt {
-    color: #C2D5E3;
-  }
+.mount-txt:hover {
+  opacity: 1;
 }
 
 .banner-pic {
@@ -245,17 +245,17 @@ p {
 }
 
 .project-box {
-  display: flex;
-  flex-direction: column;
   border-radius: 5px;
-  overflow-x: hidden;
-  text-align: center;
-  height: 100%;
-  background-image: url("../img/pj-blue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: solid #103a69 1px;
+  height: 100%;
+  overflow-x: hidden;
+  text-align: center;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 17, 0.2);
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/pj-blue.jpg");
+  border: solid #103a69 1px;
 }
 .project-box > h3 {
   color: #103a69;
@@ -275,6 +275,7 @@ p {
 }
 .project-text > a {
   color: rgb(128, 203, 226);
+  transition: 0.5s;
 }
 .project-text > a:hover {
   color: #CADCE8;
@@ -291,8 +292,10 @@ p {
 
 .inactive {
   color: gray;
+  font-size: inherit;
 }
 .inactive:hover {
+  font-size: inherit;
   text-decoration: none;
 }
 
@@ -403,9 +406,10 @@ p {
   border: solid #ccc 1px;
   cursor: pointer;
   letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.5s;
 }
 .contact-submit:hover {
-  font-weight: 500;
   border: solid rgb(128, 203, 226) 1px;
   background: #9bd8eb;
 }
@@ -447,6 +451,7 @@ p {
 .aboutme-link {
   color: #309ACA;
   font-weight: 500;
+  transition: 0.5s;
 }
 .aboutme-link:hover {
   color: #5bc0de;
@@ -459,18 +464,24 @@ p {
 
 .scheme-box {
   border-radius: 5px;
-  overflow-x: hidden;
-  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  border: solid gray 1px;
+  overflow-x: hidden;
+  text-align: center;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 17, 0.2);
+  border: solid gray 1px;
+  padding: 0 10px;
 }
 .scheme-box > h3 {
   font-size: 34px;
   font-weight: 500;
   margin: 10px auto;
+}
+@media screen and (max-width: 576px) {
+  .scheme-box > h3 {
+    font-size: 28px;
+  }
 }
 
 .scheme-img {
@@ -488,6 +499,7 @@ p {
   margin-bottom: 32px;
 }
 .scheme-text > ul {
+  padding-left: 20px;
   text-align: left;
 }
 .scheme-text > ul > li {
@@ -499,4 +511,11 @@ p {
   flex-direction: column;
   align-items: center;
   bottom: 15px;
+}
+
+.fa-chevron-up {
+  transition: 0.5s;
+}
+.fa-chevron-up:hover {
+  font-size: 26px;
 }/*# sourceMappingURL=style.css.map */

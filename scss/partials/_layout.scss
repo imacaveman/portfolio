@@ -9,12 +9,10 @@ h2 {
     color: $color-blue;
     font-size: 40px;
     text-align: center;
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: $mb-sm) {
         font-size: 36px;
     }
 }
-
-
 
 header {
     background-image: url("../img/bg-blue.jpg");
@@ -76,6 +74,7 @@ p {
         padding-bottom: 5px;
         margin: 15px 0 5px;
         border-bottom: solid $color-white 3px;
+        transition: 0.5s;
         &:hover {
             border-color: $color-blue;
             text-decoration: none;
@@ -91,10 +90,18 @@ p {
 
 .fa-github {
     color: $color-blue;
+    transition: 0.5s;
+    &:hover {
+        color: $color-cyan;
+    }
 }
 
 .fa-chevron-down {
     color: $color-white;
+    transition: 0.5s;
+    &:hover {
+        font-size: 26px;
+    }
 }
 
 .main-container {
@@ -103,7 +110,7 @@ p {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         max-width: 1000px;
     }
 }
@@ -119,7 +126,7 @@ p {
     justify-content: center;
     cursor: pointer;
     margin: 5px;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: $mb-lg) {
         display: none;
     }
 }
@@ -137,7 +144,7 @@ p {
 }
 
 .primary-content {
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: $mb-lg) {
         margin-left: 220px;
     }
 }
@@ -159,19 +166,12 @@ p {
     align-items: center;
     top: 0;
     right: 0;
-    color: $color-bg;
+    opacity: 0;
+    transition: 0.5s;
+    font-weight: 500;
+    color: $color-cyan;
     &:hover {
-        font-weight: 500;
-        color: $color-cyan;
-        & > img {
-            visibility: visible;
-        }
-    }
-    & > img {
-        visibility: hidden;
-    }
-    @media screen and (min-width: 768px) {
-        color: $color-bgdark;
+        opacity: 1;
     }
 }
 
@@ -195,7 +195,7 @@ p {
 .projects-container {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
@@ -206,23 +206,17 @@ p {
     margin-bottom: 30px;
     max-width: 450px;
     padding: 0 15px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         max-width: 50%;
     }
 }
 
 .project-box {
+    @include box-design();
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    overflow-x: hidden;
-    text-align: center;
-    height: 100%;
     background-image: url("../img/pj-blue.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     border: solid $color-blue 1px;
-    box-shadow: 4px 4px 10px 0 rgba($color-black, 0.2);
     & > h3 {
         color: $color-blue;
         margin: 10px auto;
@@ -241,6 +235,7 @@ p {
     }
     & > a {
         color: $color-lightcyan;
+        transition: 0.5s;
         &:hover {
             color: $color-bg;
         }
@@ -258,7 +253,9 @@ p {
 
 .inactive {
     color: $color-gray;
+    font-size: inherit;
     &:hover {
+        font-size: inherit;
         text-decoration: none;
     }
 }
@@ -270,14 +267,14 @@ p {
 .contact-container {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         flex-direction: row;
     }
 }
 
 .contact-section {
     padding: 0 15px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         width: 50%;
     }
 }
@@ -351,8 +348,9 @@ p {
     border: solid $color-lightgray 1px;
     cursor: pointer;
     letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.5s;
     &:hover {
-        font-weight: 500;
         border: solid $color-lightcyan 1px;
         background: lighten($color-cyan, 15%);
     }
@@ -373,7 +371,7 @@ p {
 .aboutme-container {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
         flex-direction: row;
     }
 }
@@ -383,7 +381,7 @@ p {
     & > h3 {
         margin-top: 0;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $mb-med) {
             width: 50%;
     }
 }
@@ -395,6 +393,7 @@ p {
 .aboutme-link {
     color: $color-lightblue;
     font-weight: 500;
+    transition: 0.5s;
     &:hover {
         color: $color-cyan;
         text-decoration: none;
@@ -410,18 +409,16 @@ p {
 }
 
 .scheme-box {
-    border-radius: 5px;
-    overflow-x: hidden;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    @include box-design();
     border: solid $color-gray 1px;
-    box-shadow: 4px 4px 10px 0 rgba($color-black, 0.2);
+    padding: 0 10px;
     & > h3 {
         font-size: 34px;
         font-weight: 500;
         margin: 10px auto;
+        @media screen and (max-width: $mb-sm) {
+            font-size: 28px;
+        }
     }
 }
 
@@ -439,6 +436,7 @@ p {
         margin-bottom: 32px;
     }
     & > ul {
+        padding-left: 20px;
         text-align: left;
         & > li {
             margin-bottom: 5px;
@@ -454,4 +452,11 @@ p {
     flex-direction: column;
     align-items: center;
     bottom: 15px;
+}
+
+.fa-chevron-up {
+    transition: 0.5s;
+    &:hover {
+        font-size: 26px;
+    }
 }
