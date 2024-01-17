@@ -35,6 +35,21 @@ p {
     margin-top: 0;
 }
 
+#title {
+    font-size: 84px;
+    background: -webkit-linear-gradient($color-white, $color-lightcyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#bio {
+    position: absolute;
+    bottom: 30%;
+    @media screen and (min-width: 620px) {
+        bottom: 38%;
+    }
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -115,6 +130,28 @@ p {
     }
 }
 
+.hamburger:hover {
+    opacity: 0.8; 
+}
+.hamburger.is-active:hover {
+    opacity: 0.8; 
+}
+
+.hamburger-inner {
+    background-color: $color-white;
+    &::before {
+        background-color: $color-white;
+    }
+    &::after {
+        background-color: $color-white;
+    }
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: $color-white; }
+
 .burger-container {
     display: flex;
     position: fixed;
@@ -122,7 +159,7 @@ p {
     width: 60px;
     border-radius: 3px;
     background-color: $color-blue;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     cursor: pointer;
     margin: 5px;
@@ -188,6 +225,16 @@ p {
     flex-direction: column;
     align-items: center;
     bottom: 15px;
+}
+
+.title-glow {
+    transition: 1s;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color-lightcyan, 0 0 40px $color-lightcyan, 0 0 50px $color-lightcyan, 0 0 60px $color-lightcyan, 0 0 70px $color-lightcyan;
+}
+
+.title-glow-off {
+    transition: 1s;
+    text-shadow: none;
 }
 
 // ---------- HOMEPAGE ---------- //

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/hamburgers/hamburgers.css">
     <link rel="stylesheet" href="scss/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +13,16 @@
 </head>
 <body>
     <div class="burger-container">
-        <div class="burger-box">
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <!-- <div class="burger-box">
             <span class="burger-mid"></span>
             <span class="burger-mid"></span>
             <span class="burger-mid"></span>
-        </div>
+        </div> -->
     </div>
     <div class="sidebar">
         <div class="sidebar-logo">
@@ -46,8 +52,8 @@
                 <a href="index.html">
                     <!-- <img src="img/placeholder.png" alt="n/a" class="banner-pic"> -->
                 </a>
-                <h1>Darren Cattee</h1>
-                <p>Web & Software Developer</p>
+                <h1 id="title">Darren Cattee</h1>
+                <p id="bio">Web & Software Developer</p>
                 <div class="scroll-notice">
                     Scroll Down
                     <a href="#project-list"><i class="fa-solid fa-chevron-down"></i></a>
@@ -80,28 +86,28 @@
                             </div>
                         </div>
                     </div>
+                    <div class="projects">
+                        <div class="project-box">
+                            <h3>Coming Soon...</h3>
+                            <img src="img/coming-soon.png" alt="Netmatters Frontpage Project" class="project-img">
+                            <div class="project-text">
+                                <p>When I take on and complete more projects in the future, I will place them here.<br>Please come back later to see more of my future projects.</p>
+                                <a href="#" class="inactive"><span class="view-project inactive">View Project</span> <i class="fa-solid fa-arrow-right inactive"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects">
+                        <div class="project-box">
+                            <h3>Coming Soon...</h3>
+                            <img src="img/coming-soon.png" alt="Netmatters Frontpage Project" class="project-img">
+                            <div class="project-text">
+                                <p>When I take on and complete more projects in the future, I will place them here.<br>Please come back later to see more of my future projects.</p>
+                                <a href="#" class="inactive"><span class="view-project inactive">View Project</span> <i class="fa-solid fa-arrow-right inactive"></i></a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Commented separately per "projects". Uncomment the <divs> separately to add additional projects -->
 
-                    <!-- <div class="projects">
-                        <div class="project-box">
-                            <h3>Coming Soon...</h3>
-                            <img src="img/coming-soon.png" alt="Netmatters Frontpage Project" class="project-img">
-                            <div class="project-text">
-                                <p>When I take on and complete more projects in the future, I will place them here.<br>Please come back later to see more of my future projects.</p>
-                                <a href="#" class="inactive"><span class="view-project inactive">View Project</span> <i class="fa-solid fa-arrow-right inactive"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="projects">
-                        <div class="project-box">
-                            <h3>Coming Soon...</h3>
-                            <img src="img/coming-soon.png" alt="Netmatters Frontpage Project" class="project-img">
-                            <div class="project-text">
-                                <p>When I take on and complete more projects in the future, I will place them here.<br>Please come back later to see more of my future projects.</p>
-                                <a href="#" class="inactive"><span class="view-project inactive">View Project</span> <i class="fa-solid fa-arrow-right inactive"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
                     <!-- <div class="projects">
                         <div class="project-box">
                             <h3>Coming Soon...</h3>
@@ -170,5 +176,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/myjs.js"></script>
 </body>
 </html>
