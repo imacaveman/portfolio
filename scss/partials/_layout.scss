@@ -39,6 +39,7 @@ p {
     font-size: 84px;
     background: -webkit-linear-gradient($color-white, $color-lightcyan);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -55,12 +56,20 @@ p {
     flex-direction: column;
     position: fixed;
     background-color: $color-white;
+    left: -220px;
     width: 220px;
     height: 100%;
     border-right: solid $color-blue 5px;
-    @media screen and (max-width: 991px) {
-        display: none;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+    @media screen and (min-width: 991px) {
+        left: 0;
     }
+}
+
+.show {
+    left: 0;
+    transition: 0.5s ease-in-out;
 }
 
 .sidebar-logo {
@@ -150,7 +159,8 @@ p {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: $color-white; }
+    background-color: $color-white; 
+}
 
 .burger-container {
     display: flex;
@@ -163,9 +173,16 @@ p {
     justify-content: center;
     cursor: pointer;
     margin: 5px;
+    left: 0;
+    transition: 0.5s ease-in-out;
     @media screen and (min-width: $mb-lg) {
         display: none;
     }
+}
+
+.burger-clicked {
+    left: 220px;
+    transition: 0.5s ease-in-out;
 }
 
 .burger-box {
@@ -361,6 +378,12 @@ p {
     border: solid $color-lightgray 1px;
 }
 
+.warning-input {
+    border: solid red 1px;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #de5b5b99;
+}
+
 ::placeholder {
     opacity: 0.75;
 }
@@ -401,6 +424,11 @@ p {
         border: solid $color-lightcyan 1px;
         background: lighten($color-cyan, 15%);
     }
+}
+
+.required-field {
+    transition: 1s;
+    border: solid red 2px;
 }
 
 // ---------- END OF HOMEPAGE ---------- //
