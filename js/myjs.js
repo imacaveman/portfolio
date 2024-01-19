@@ -1,6 +1,6 @@
 // *************** VARIABLES *************** //
 
-const $headerTitle = $("#title");
+const $headerTitle = $(".title-intro");
 const $headerBio = $("#bio");
 const $hamburger = $(".hamburger");
 const $hamburgerContainer = $(".burger-container");
@@ -33,19 +33,43 @@ $(".sidebar-nav a").on("click", function(event){
     $sidebar.toggleClass("show");
 });
 
+// *************** TRY BOTH *************** //
+
 $($contactName).attr('required',true);
 $($contactSurname).attr('required',true);
 $($contactEmail).attr('required',true);
 
+// $($contactName).prop('required',true);
+// $($contactSurname).prop('required',true);
+// $($contactEmail).prop('required',true);
+
+// **************************************** //
+
 $(document).ready(function() {
     $(".contact-submit").click(function() {
-        var emailInput = $("#contact-email").val();
+        var emailInput = $contactEmail.val();
         if (isValidEmail(emailInput)) {
             console.log("Valid email address!");
         } else {
-            $("#contact-email").addClass("warning-input");
-            $("#contact-email").val("Invalid email address");
+            $(".error1").text("Please enter a valid email address");
+            $contactEmail.addClass("warning-input");
             console.log("Invalid email address.");
+        }
+        var nameInput = $contactName.val();
+        if (nameInput) {
+            console.log("Valid name!");
+        } else {
+            $(".error2").text("Please enter your first and last name");
+            $contactName.addClass("warning-input");
+            console.log("Invalid name.");
+        }
+        var surnameInput = $contactSurname.val();
+        if (surnameInput) {
+            console.log("Valid surname!");
+        } else {
+            $(".error2").text("Please enter your first and last name");
+            $contactSurname.addClass("warning-input");
+            console.log("Invalid surname.");
         }
     });
     function isValidEmail(email) {
@@ -54,6 +78,14 @@ $(document).ready(function() {
     }
 });
 
-$("#contact-email").on("click", function(event){
+// This will remove any red borders around previously incorrect fields
+
+$contactEmail.on("click", function(event){
+    $(this).removeClass("warning-input");
+});
+$contactName.on("click", function(event){
+    $(this).removeClass("warning-input");
+});
+$contactSurname.on("click", function(event){
     $(this).removeClass("warning-input");
 });
