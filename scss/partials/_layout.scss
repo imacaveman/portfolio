@@ -256,7 +256,7 @@ p {
 
 // ---------- HOMEPAGE ---------- //
 
-.projects-container {
+.projects-container, .coding-container {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: $mb-med) {

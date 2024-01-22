@@ -288,12 +288,12 @@ p {
   text-shadow: none;
 }
 
-.projects-container {
+.projects-container, .coding-container {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .projects-container {
+  .projects-container, .coding-container {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
