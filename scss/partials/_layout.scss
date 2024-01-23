@@ -391,6 +391,11 @@ p {
     opacity: 0.75;
 }
 
+::-moz-placeholder {
+    color: $color-gray;
+    opacity: 0.75;
+}
+
 #contact-name {
     @include focus-glow();
 }

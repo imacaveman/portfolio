@@ -441,6 +441,11 @@ p {
   opacity: 0.75;
 }
 
+::-moz-placeholder {
+  color: gray;
+  opacity: 0.75;
+}
+
 #contact-name:focus {
   border-color: #80cbe2;
   outline: 0;
