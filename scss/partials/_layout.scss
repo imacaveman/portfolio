@@ -291,6 +291,8 @@ p {
 }
 
 .project-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 10px 15px 15px;
     & > p {
@@ -298,6 +300,7 @@ p {
         margin-top: 0;
     }
     & > a {
+        margin-top: auto;
         color: $color-lightcyan;
         transition: 0.5s;
         &:hover {

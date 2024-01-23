@@ -1,6 +1,11 @@
 #main-box-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-box-desc {
+  margin-top: 5px;
 }
 
 .box-example-container {

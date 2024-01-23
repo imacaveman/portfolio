@@ -333,6 +333,8 @@ p {
 }
 
 .project-text {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 10px 15px 15px;
 }
@@ -341,6 +343,7 @@ p {
   margin-top: 0;
 }
 .project-text > a {
+  margin-top: auto;
   color: #80cbe2;
   transition: 0.5s;
 }
