@@ -2,6 +2,7 @@ const $container = $('.box-example-container');
 const $mainBox = $('.main-box');
 const $walkSpeed = 10; // this SHOULD change the speed the box moves??
 
+
 // For some reason the first time the container is clicked, the box is instantly appearing at the designated spot, then behaves as normal upon further clicking
 $mainBox.hide();
 
@@ -41,4 +42,42 @@ $container.on("click", function(event){
             });
         }, i * 1000 / $walkSpeed);
     }
+});
+
+// *************** RIGHT-CLICK MENU *************** //
+
+$(function() {
+    const $rightClickMenu = $(".right-click-menu");
+
+    $container.on("contextmenu", function(){
+        event.preventDefault();
+        $rightClickMenu.css({
+            display: "block",
+            left: event.pageX - $container.offset().left,
+            top: event.pageY - $container.offset().top
+        });
+    });
+
+    $mainBox.on("contextmenu", function(event) {
+        event.preventDefault();
+        $rightClickMenu.css({
+            display: "block",
+            left: event.pageX - $container.offset().left,
+            top: event.pageY - $container.offset().top
+        });
+    });
+
+    $(document).on("click", function(event) {
+        $rightClickMenu.hide();
+    });
+
+    $(".menu-button1").on("click", function() {
+        console.log("Button 1 pressed");
+        $rightClickMenu.hide();
+    });
+
+    $(".menu-button2").on("click", function() {
+        console.log("Button 2 pressed");
+        $rightClickMenu.hide();
+    });
 });

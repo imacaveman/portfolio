@@ -26,3 +26,16 @@
     border-radius: 10px 10px 0 0;
     transition: 1s;
   }
+
+  .right-click-menu {
+    display: none;
+    position: absolute;
+    background-color: #202020;
+    border: solid #001 1px;
+    & a {
+      display: block;
+      color: #e7e7e7;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
